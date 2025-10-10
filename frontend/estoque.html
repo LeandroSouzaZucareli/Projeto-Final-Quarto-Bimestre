@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Plataforma - Estoque</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-container">
+    <h1>📦 Página de Estoque</h1>
+    <p>Aqui você vai gerenciar os produtos e o estoque.</p>
+  <button onclick="window.location.href='dashboard.html'">⬅ Voltar</button>
+  <button onclick="window.location.href='index.html'">🔒 Sair/Login</button>
+    <button id="btn-categorias">Abrir Categorias</button>
+    <div id="submenu-categorias" style="display:none; margin-top:16px;">
+      <button class="categoria-btn" data-categoria="acougue">Açougue</button>
+      <button class="categoria-btn" data-categoria="limpeza">Limpeza</button>
+      <button class="categoria-btn" data-categoria="padaria">Padaria</button>
+      <button class="categoria-btn" data-categoria="bebidas">Bebidas</button>
+    </div>
+    <div id="produtos-categoria" style="margin-top:24px;"></div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>

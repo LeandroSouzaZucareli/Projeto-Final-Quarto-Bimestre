@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Plataforma - Publicar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-container">
+    <h1>📝 Cadastro de Produtos</h1>
+    <p>Preencha os dados para cadastrar um novo produto no estoque.</p>
+    <form id="form-cadastro-produto" style="margin-bottom:24px;">
+      <div style="margin-bottom:12px;">
+        <label for="nome-produto">Nome do Produto:</label><br>
+        <input type="text" id="nome-produto" name="nome-produto" required style="width:60%;padding:8px;border-radius:6px;border:1px solid #c3aed6;">
+      </div>
+      <div style="margin-bottom:12px;">
+        <label for="categoria-produto">Categoria:</label><br>
+        <select id="categoria-produto" name="categoria-produto" required style="width:60%;padding:8px;border-radius:6px;border:1px solid #c3aed6;">
+          <option value="acougue">Açougue</option>
+          <option value="limpeza">Limpeza</option>
+          <option value="padaria">Padaria</option>
+          <option value="bebidas">Bebidas</option>
+        </select>
+      </div>
+      <div style="margin-bottom:12px;">
+        <label for="descricao-produto">Descrição:</label><br>
+        <input type="text" id="descricao-produto" name="descricao-produto" style="width:60%;padding:8px;border-radius:6px;border:1px solid #c3aed6;">
+      </div>
+      <div style="margin-bottom:12px;">
+        <label for="quantidade-produto">Quantidade:</label><br>
+        <input type="number" id="quantidade-produto" name="quantidade-produto" min="1" required style="width:60%;padding:8px;border-radius:6px;border:1px solid #c3aed6;">
+      </div>
+      <button type="submit">Cadastrar Produto</button>
+    </form>
+    <button onclick="window.location.href='dashboard.html'">⬅ Voltar</button>
+    <button onclick="window.location.href='index.html'">🔒 Sair/Login</button>
+    <div id="mensagem-cadastro" style="margin-top:16px;"></div>
+  </div>
+  <script>
+    document.getElementById('form-cadastro-produto').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome-produto').value;
+      const categoria = document.getElementById('categoria-produto').value;
+      const descricao = document.getElementById('descricao-produto').value;
+      const quantidade = document.getElementById('quantidade-produto').value;
+      // Simula envio para o estoque (localStorage)
+      let produtos = JSON.parse(localStorage.getItem('produtosEstoque') || '{}');
+      if (!produtos[categoria]) produtos[categoria] = [];
+      produtos[categoria].push({ nome, descricao, quantidade });
+      localStorage.setItem('produtosEstoque', JSON.stringify(produtos));
+      document.getElementById('mensagem-cadastro').innerHTML = '<span style="color:green;">Produto cadastrado com sucesso!</span>';
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

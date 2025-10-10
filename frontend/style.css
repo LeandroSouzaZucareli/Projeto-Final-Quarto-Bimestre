@@ -1,0 +1,146 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo da página */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e5e5e5, #c3aed6);
+}
+
+/* Container do login */
+.login-container {
+  background: #f4f4f4;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  width: 320px;
+  text-align: center;
+}
+
+/* Título */
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #6c3483;
+}
+
+/* Grupos de inputs */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #7d7d7d;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c3aed6;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #6c3483;
+  box-shadow: 0 0 5px rgba(108, 52, 131, 0.2);
+}
+
+/* Botão */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #c3aed6;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #6c3483;
+}
+
+
+
+
+
+
+
+/* ===== Dashboard ===== */
+.dashboard-container {
+  text-align: center;
+  padding: 50px;
+  color: #333;
+}
+
+.dashboard-container h1 {
+  margin-bottom: 10px;
+}
+
+.btn-group {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-group button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  background: #c3aed6;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-group button:hover {
+  background: #6c3483;
+}
+
+
+
+
+
+/* ===== Outras Páginas ===== */
+.page-container {
+  text-align: center;
+  padding: 50px;
+  color: #333;
+}
+
+.page-container button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #c3aed6;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.page-container button:hover {
+  background: #6c3483;
+}
